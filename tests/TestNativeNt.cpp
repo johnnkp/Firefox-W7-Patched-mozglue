@@ -510,7 +510,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "%lu\n",
         ::GetLastError());
     return 1;
-  } */
+  }
 
   UINT len;
   VS_FIXEDFILEINFO* fixedFileInfo = nullptr;
@@ -521,7 +521,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "%lu\n",
         ::GetLastError());
     return 1;
-  }
+  } */
 
   const uint64_t expectedVersion =
       (static_cast<uint64_t>(fixedFileInfo->dwFileVersionMS) << 32) |
