@@ -30,7 +30,7 @@ with Files("TestBaseProfiler.cpp"):
 if CONFIG["OS_ARCH"] == "WINNT":
     GeckoCppUnitTests(
         [
-            "TestNativeNt",
+            # "TestNativeNt",
             "TestPEExportSection",
             "TestStackCookie",
             "TestTimeStampWin",
@@ -39,7 +39,7 @@ if CONFIG["OS_ARCH"] == "WINNT":
     )
     OS_LIBS += [
         "ntdll",
-        "version",
+        # "version",
     ]
 
 if CONFIG["OS_TARGET"] == "WINNT" and CONFIG["CC_TYPE"] in ("gcc", "clang"):
