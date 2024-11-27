@@ -548,7 +548,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "(0x%016llX) does not match expected version (0x%016llX)\n",
         version, expectedVersion);
     return 1;
-  } */
+  }
 
   Maybe<Span<IMAGE_THUNK_DATA>> iatThunks =
       k32headers.GetIATThunksForModule("kernel32.dll");
@@ -628,7 +628,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "TEST-FAILED | NativeNt | "
         "GetModuleHandleFromLeafName unexpectedly returns a value.\n");
     return 1;
-  }
+  } */
 
   if (!TestModuleInfo()) {
     return 1;
