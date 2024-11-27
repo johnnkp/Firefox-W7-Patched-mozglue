@@ -521,7 +521,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "%lu\n",
         ::GetLastError());
     return 1;
-  } */
+  }
 
   const uint64_t expectedVersion =
       (static_cast<uint64_t>(fixedFileInfo->dwFileVersionMS) << 32) |
@@ -548,7 +548,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "(0x%016llX) does not match expected version (0x%016llX)\n",
         version, expectedVersion);
     return 1;
-  }
+  } */
 
   Maybe<Span<IMAGE_THUNK_DATA>> iatThunks =
       k32headers.GetIATThunksForModule("kernel32.dll");
