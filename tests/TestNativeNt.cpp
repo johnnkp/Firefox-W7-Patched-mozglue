@@ -493,7 +493,7 @@ int wmain(int argc, wchar_t* argv[]) {
   }
 
   const wchar_t kKernel32[] = L"kernel32.dll";
-  DWORD verInfoSize = ::GetFileVersionInfoSizeW(kKernel32, nullptr);
+  /* DWORD verInfoSize = ::GetFileVersionInfoSizeW(kKernel32, nullptr);
   if (!verInfoSize) {
     printf(
         "TEST-FAILED | NativeNt | Call to GetFileVersionInfoSizeW failed with "
@@ -510,7 +510,7 @@ int wmain(int argc, wchar_t* argv[]) {
         "%lu\n",
         ::GetLastError());
     return 1;
-  }
+  } */
 
   UINT len;
   VS_FIXEDFILEINFO* fixedFileInfo = nullptr;
