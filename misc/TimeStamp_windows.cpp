@@ -556,16 +556,16 @@ MFBT_API uint64_t TimeStamp::ComputeProcessUptime() {
     return 0;
   }
 
-  static const StaticDynamicallyLinkedFunctionPtr<void(WINAPI*)(LPFILETIME)>
+  /* static const StaticDynamicallyLinkedFunctionPtr<void(WINAPI*)(LPFILETIME)>
       pGetSystemTimePreciseAsFileTime(L"kernel32.dll",
-                                      "GetSystemTimePreciseAsFileTime");
+                                      "GetSystemTimePreciseAsFileTime"); */
 
   FILETIME now;
-  if (pGetSystemTimePreciseAsFileTime) {
+  /* if (pGetSystemTimePreciseAsFileTime) {
     pGetSystemTimePreciseAsFileTime(&now);
-  } else {
+  } else { */
     GetSystemTimeAsFileTime(&now);
-  }
+  // }
 
   ULARGE_INTEGER startUsec = {{start.dwLowDateTime, start.dwHighDateTime}};
   ULARGE_INTEGER nowUsec = {{now.dwLowDateTime, now.dwHighDateTime}};
